@@ -10,4 +10,6 @@ node 'sura-puppet.sura-puppet.b3.internal.cloudapp.net' {
 # This is the default case for our puppet agent nodes
 node default {
   file { '/tmp/hello': content => "Hello, I am puppet agent ${fqdn}\n", }
+  include user::virtual
+  include user::sysadmin
 }
