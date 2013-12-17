@@ -5,6 +5,8 @@ class user::virtual {
     $key) {
     user { $name:
       ensure     => present,
+      uid        => $uid,
+      comment    => $comment,
       managehome => true,
     }
 
@@ -27,4 +29,4 @@ class user::virtual {
     uid     => 11000,
     key     => 'AAAAB3NzaC1yc2EAAAADAQABAAABAQCfxEHcQkdPlAMbpsG75hyCCLG41xXW5Z8/ozItbXsQrarO08RYw/DDEX8dVrHyzAYAfIZ/qTjFVNuKSauE4g/7u9RJWjl0htwHc0AXXGHitnzdsL/VXFKoUVIjZV3V/tLodx+G1+Xd3nDc0VIljPOxkGC9yJOZkzLcotvhkDcEOruX9jBRJxVJnf+tTkEy1gF1sMAG8CfBccxlqu2HEqGP9uQiH1mPsFotbO2+xCG44zH5wTRbODUucGZamSD695UQ4b0cXeil+m1+RT+IVb6FGNX88p0AKcTVxY2YCiiO+8thx2QAuOMdlAGzaMJJxjYpRuLa2ujkqcswIkB+8U8z'
   }
-}
+}
